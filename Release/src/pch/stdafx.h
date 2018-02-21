@@ -61,13 +61,6 @@
 #include <atomic>
 #include <signal.h>
 #include "pthread.h"
-#if (defined(ANDROID) || defined(__ANDROID__))
-// Boost doesn't recognize libstdcpp on top of clang correctly
-#include "boost/config.hpp"
-#include "boost/config/stdlib/libstdcpp3.hpp"
-#undef BOOST_NO_CXX11_SMART_PTR
-#undef BOOST_NO_CXX11_NULLPTR
-#endif
 #include "boost/thread/mutex.hpp"
 #include "boost/thread/condition_variable.hpp"
 #include "boost/date_time/posix_time/posix_time_types.hpp"
